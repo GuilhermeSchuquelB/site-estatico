@@ -1,3 +1,5 @@
+/* Estilos padrão */
+
 .redes-sociais {
     margin-top: 100px;
 }
@@ -19,7 +21,6 @@
 .redes-sociais img:hover {
     transform: rotate(360deg);
     transition: 1s;
-
 }
 
 h1 {
@@ -35,10 +36,53 @@ p {
     padding: 10px 10px 60px 10px;
     background: #FFFFFF;
     transform: rotate(4deg);
-    transition: 1s
+    transition: 1s;
 }
 
 .polaroid:hover {
     box-shadow: 4px 4px 40px 20px #000000;
     transform: rotate(14deg);
+}
+
+/*telas menores que 768px */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .redes-sociais {
+        margin-top: 50px;
+    }
+
+    .redes-sociais a {
+        margin-right: 10px;
+    }
+
+    .polaroid {
+        width: 90%;
+        padding: 10px;
+        transform: none;
+    }
+
+    .polaroid:hover {
+        box-shadow: none;
+        transform: none;
+    }
+}
+
+/* telas maiores que 768px */
+
+@media (min-width: 769px) {
+    .redes-sociais {
+        margin-top: 150px;
+    }
+
+    .polaroid {
+        margin-top: 50px;
+    }
 }

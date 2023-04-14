@@ -1,39 +1,39 @@
 @font-face {
     font-family: Poppins;
     src: url(../fonts/Poppins-Regular.ttf) format("truetype");
-
     /* podemos usar o Google Fonts também */
 }
-
-
 
 body {
     background: #252629;
     margin: 0;
     padding: 0;
-    /* para remover o afastamento entre o conteudo e as paredes */
     font-family: Poppins;
     color: #FFFFFF;
 }
 
 header {
     background: #000000;
-    padding: 30px 0;
+    padding: 5% 0 2% 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    min-height: 30px;
 }
+
+
 
 .container {
-    /* border: 1px solid yellow; */
-    width: 1170px;
-    /* margin-top: 0;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: auto; */
-
-    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 0; /* para evitar o vazamento quando havia mudança de tamanho da tela */
 }
 
+
 .menu {
-    /* border: 1px solid orange; */
     float: right;
     margin-top: 10px;
 }
@@ -45,7 +45,6 @@ header {
     padding: 20px;
     transition: background 1s;
     border-radius: 5px;
-
 }
 
 .menu a:hover, 
@@ -54,27 +53,52 @@ header {
     transition: background 1s;
 }
 
-/* seção das paginas */
-
 section {
-    /* border: 1px solid yellow; */
-    width: 1170px;
+    width: 100%;
     margin: 80px auto 0;
     font: #FFFFFF;
 }
 
 aside {
-    /* border: 1px solid pink; */
     min-height: 300px;
     display: inline-block;
     vertical-align: top;
 }
 
 aside:first-child {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
 }
 
 aside:last-child {
-    width: 500px;
-    margin-left: 60px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: 0;
 }
+
+@media (min-width: 768px) {
+    /* 768px de largura ou mais */
+    .menu {
+        margin-top: 0;
+    }
+    section {
+        margin-top: 120px;
+    }
+    aside:first-child {
+        width: 60%;
+        max-width: none;
+    }
+    aside:last-child {
+        width: 40%;
+        max-width: none;
+        margin-left: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* 992px de largura ou mais */
+    .container {
+        padding: 0;
+    }
+}
+  

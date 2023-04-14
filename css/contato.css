@@ -1,102 +1,97 @@
-iframe {
-
-    margin: 100px 0;
-    width: 410px;
-    height: 300px;
+/* Estilos padrão */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Poppins;
+  }
+  
+  /* Estilos para o iframe */
+  iframe {
+    margin: 10vh auto;
+    width: 80vw;
+    max-width: 600px;
+    height: 40vw;
+    max-height: 300px;
     border-radius: 10px;
-}
-
-input,
-textarea,
-button {
+  }
+  
+  /* Estilos para os campos de entrada */
+  input,
+  textarea {
     color: #FFFFFF;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-family: Poppins;
     text-indent: 3px;
-    box-sizing: border-box;
     outline: none;
     padding: 10px;
-    border: 1px solid #FFFFFF;
+    border: none;
     border-radius: 10px;
     background: transparent;
-    margin-bottom: 20px;
-    transition: 1s;
-    width: 600px;
-}
-
-
-.contato {
-    margin-top: 105px;
-
-}
-
-
-
-
-.nome {
-    /* width: 600px; */
-    height: 42px;
-    /* background: #3B3D5D; */
-    /* border: 1px solid #FFFFFF; */
-    /* border-radius: 10px; */
-    /* margin-bottom: 20px; */
-    /* transition: 1s; */
-}
-
-.email {
-    /* width: 660px; */
-    height: 42px;
-    /* background: #3B3D5D; */
-    /* border: 1px solid #FFFFFF; */
-    /* border-radius: 10px; */
-    /* margin-bottom: 20px; */
-    /* transition: 1s; */
-}
-
-.msg {
-    /* width: 660px; */
-    height: 80px;
-    /* background: #3B3D5D; */
-    /* border: 1px solid #FFFFFF; */
-    /* border-radius: 10px; */
-    /* margin-bottom: 20px; */
-    /* transition: 1s; */
-    resize: none;
-}
-
-.botao {
+    margin-bottom: 2rem;
+    transition: background-color 1s;
+    width: 100%;
+  }
+  
+  /* Estilos para o botão */
+  button {
     width: auto;
     text-decoration: none;
     float: right;
-    padding: 12px 13px 12px 13px;
-    /* transition: 1s; */
-}
-/* msg de erro */
-#erro {
-    width: 400px;
-    margin-top: 5px;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff4a57;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: background-color 1s;
+  }
+  
+  /* Estilos para o container do formulário */
+  .contato {
+    margin-top: 10vh;
+    width: 80vw;
+    max-width: 600px;
+  }
+  
+  /* Estilos para a mensagem de erro */
+  #erro {
+    width: 100%;
+    margin-top: 1rem;
     font-weight: bold;
     font-style: italic;
-}
-
-.campoErro {
+    color: rgb(247, 46, 46);
+  }
+  
+  /* Estilos adicionais para campos de entrada quando houver erro */
+  .campoErro {
     border: 1px dashed rgb(247, 46, 46);
     background: #393a41;
-}
-
-/* comandos diferentes */
-
-::placeholder {
+  }
+  
+  /* Estilos para o hover */
+  ::placeholder {
     color: #CCCCCC;
-}
-
-.botao:hover {
-    background: #ff4a57;
-    border: #ff4a57;
-}
-
-.nome:hover, 
-.email:hover, 
-.msg:hover {
-    background:#393a41;
-}
+  }
+  
+  button:hover {
+    background-color: #ffffff;
+    color: #ff4a57;
+    border: 1px solid #ff4a57;
+  }
+  
+  input:hover,
+  textarea:hover {
+    background-color: #393a41;
+  }
+  
+  /* Media queries */
+  @media (min-width: 768px) {
+    .contato {
+      margin-top: 5vh;
+    }
+  }
+  
